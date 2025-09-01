@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Gaurisha!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Baloo+2&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffe0f0, #f9c5d1);
+      font-family: 'Baloo 2', cursive;
+      text-align: center;
+      color: #d63384;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3em;
+      margin-top: 50px;
+      animation: popIn 1.5s ease-in-out;
+      color: #ff4da6;
+      text-shadow: 1px 1px 4px #fff;
+    }
+
+    .typewriter p {
+      font-size: 1.3em;
+      margin: 20px auto;
+      max-width: 90%;
+      width: 700px;
+      padding: 20px;
+      border-radius: 15px;
+      background: #fff8fb;
+      border: 2px dashed #ffaad4;
+      color: #c2185b;
+      line-height: 1.6;
+      animation: fadeIn 2.5s ease-in;
+    }
+
+    .personal-note {
+      font-size: 1.2em;
+      color: #a40f5c;
+      background: #ffe6f2;
+      border: 2px solid #ffaad4;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 600px;
+      border-radius: 15px;
+      line-height: 1.5;
+    }
+    .letter-wrapper {
+      position: relative;
+      z-index: 1;
+    }
+
+    .heartfelt-note {
+      background: rgba(255, 240, 250, 0.95);
+      border: 2px dashed #ffaad4;
+      border-radius: 16px;
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 650px;
+      text-align: left;
+      font-family: 'Comic Neue', cursive;
+      color: #b3396d;
+      box-shadow: 0 0 20px rgba(255, 170, 212, 0.4);
+      font-size: 1rem;
+      line-height: 1.6;
+      animation: fadeInNote 1.2s ease-in-out both;
+    }
+
+    @keyframes fadeInNote {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: radial-gradient(#ffd1dc 1px, transparent 1px),
+                        radial-gradient(#ffe0f0 1px, transparent 1px);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+      animation: sparkleMove 10s linear infinite;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    @keyframes sparkleMove {
+      0% { background-position: 0 0, 20px 20px; }
+      100% { background-position: 40px 40px, 60px 60px; }
+    }
+
+    *,
+    *::before,
+    *::after {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+      border-radius: 8px;
+    }
+
+    .cake {
+      width: 100%;
+      position: absolute;
+      bottom: 10px;
+    }
+
+    .bottom-layer,
+    .top-layer,
+    .middle-layer {
+      height: 80px;
+      width: 240px;
+      position: relative;
+      margin: auto;
+      background-repeat: repeat;
+      background-size: 100% 100%, 60px 100px;
+      background-position: 28px 0;
+      background-image: linear-gradient(
+          transparent 50px,
+          #e3a953 50px,
+          #e3a953 60px,
+          transparent 60px
+        ),
+        radial-gradient(circle at 30px 5px, #713e16 30px, #eac284 31px);
+    }
+
+    .middle-layer {
+      transform: scale(0.85);
+      top: 72px;
+      animation: rise-1 2s forwards;
+    }
+
+    @keyframes rise-1 { 100% { top: 7px; } }
+
+    .top-layer {
+      transform: scale(0.7);
+      top: 144px;
+      animation: rise-2 2s 2s forwards;
+    }
+
+    @keyframes rise-2 { 100% { top: 26px; } }
+
+    .candle {
+      background: repeating-linear-gradient(
+        45deg,
+        #fd3018 0,
+        #fd3018 5px,
+        #ffa89e 5px,
+        #ffa89e 10px
+      );
+      height: 45px;
+      width: 15px;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      animation: rise-3 1s 4s forwards;
+    }
+
+    @keyframes rise-3 { 100% { bottom: 202px; } }
+
+    .candle:after {
+      content: "";
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      background-color: #ffee54;
+      border-radius: 0 50% 50% 50%;
+      transform: scale(0) rotate(45deg);
+      bottom: 50px;
+      left: -0.5px;
+      animation: flame 1.5s 5s forwards;
+    }
+
+    @keyframes flame { 100% { transform: scale(1) rotate(45deg); } }
+
+    .gif-container {
+      display: none;
+      justify-content: center;
+      margin: 20px 0 40px;
+    }
+
+    .buttons { margin-top: 20px; }
+
+    button {
+      margin: 10px;
+      padding: 12px 30px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 30px;
+      background-color: #ff66b2;
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    button:hover { transform: scale(1.1); }
+
+    .countdown {
+      font-size: 1.3em;
+      margin-top: 30px;
+      color: #a40f5c;
+    }
+
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff5eab;
+      transform: rotate(45deg);
+      animation: float linear infinite;
+    }
+
+    .heart:before,
+    .heart:after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff5eab;
+      border-radius: 50%;
+    }
+
+    .heart:before { top: -10px; left: 0; }
+    .heart:after { left: -10px; top: 0; }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(45deg); opacity: 0; }
+      100% { transform: translateY(-100vh) rotate(45deg); opacity: 1; }
+    }
+
+    #surpriseContainer {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .surprise-image {
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    #surpriseVideo {
+  display: none;
+  margin: 20px auto;
+  max-width: 80%;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 182, 193, 0.8);
+}
+
+#surpriseVideo.show {
+  display: block;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+  </style>
+</head>
+<body>
+      <div id="lock-screen" style="display:none; text-align:center; padding: 50px;">
+  <h2 style="color: #ff69b4;">This surprise will unlock on the special day! 🎁</h2>
+  <p>Countdown to the moment:</p>
+  <h1 id="countdown" style="font-size: 2em; color: #5c2a4a;"></h1>
+</div>
+
+<div id="birthday-content" style="display:none;">
+  <!-- Your entire birthday page content goes here (cake, message, letter, etc.) -->
+
+  <div id="gate" style="display:none">
+    <h1>🎉 Surprise Coming Soon! 🎁</h1>
+    <div class="countdown" id="countdown"></div>
+  </div>
+
+  <h1>🎉 Happy Birthday Gaurisha! 🎂</h1>
+  <br><br><br><br>
+  <div class="container">
+    <div class="cake">
+      <div class="candle"></div>
+      <div class="top-layer"></div>
+      <div class="middle-layer"></div>
+      <div class="bottom-layer"></div>
+    </div>
+  </div>
+
+  <div class="typewriter">
+    <p>Wishing you all the magic, sparkle, and joy on your special day! You light up the world with your smile and kindness. Have a day filled with laughter, cake, surprises, and love 💖🎈</p>
+  </div>
+
+  <div class="personal-note">
+    You're an incredibly special person and I feel lucky to know you. May this year bring you closer to your dreams and give you countless moments of happiness. Keep being the amazing soul you are! 💫❤️
+  </div>
+
+  <div class="letter-wrapper">
+    <div class="heartfelt-note">
+      <p>🎀 <strong>Dear Gaurisha,</strong> 🎀</p>
+      <p>✨ On this beautiful day, the world got a little brighter because <strong>you</strong> were born. 💫<br>
+      Your smile lights up every room, your kindness leaves a mark on every heart, and your presence brings calm even on the stormiest days.</p>
+      <p>May your journey ahead be filled with laughter that echoes for miles, dreams that dance into reality, and moments that feel like magic. 🎈</p>
+      <p>I hope today surrounds you with everything and everyone you love.<br>
+      You deserve the absolute best — not just today, but every single day. 🌷💗</p>
+      <p>🎂 <strong>Happy Birthday, Gaurisha!</strong> 🎂<br>
+      May your heart always stay as golden as it is today.</p>
+      <p>With all the good vibes and purest wishes,<br>
+      — From someone who appreciates you a lot 💌🌸
+    </div>
+  </div>
+<video id="surpriseVideo" class="hidden" controls autoplay playsinline>
+  <source src="videos/SURPRISE.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+  <button id="surpriseBtn">🎁 Surprise 🎁</button>
+  <div id="surpriseContainer"></div>
+
+  <div class="hearts" id="hearts"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+document.getElementById("surpriseBtn").addEventListener("click", function() {
+  // Show video
+  const video = document.getElementById("surpriseVideo");
+  video.classList.add("show");
+  video.play();
+
+  // Launch confetti 🎉
+  confetti({
+    particleCount: 150,
+    spread: 70,
+    origin: { y: 0.6 }
+  });
+});
+
+    const heartsContainer = document.getElementById("hearts");
+    for (let i = 0; i < 30; i++) {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "%";
+      heart.style.animationDuration = 5 + Math.random() * 5 + "s";
+      heart.style.opacity = Math.random();
+      heart.style.top = Math.random() * 100 + "%";
+      heartsContainer.appendChild(heart);
+    }
+  </script>
+ <script>
+  const birthdayDate = new Date("September 2, 2025 00:00:00").getTime();
+  const dayAfter = new Date("September 3, 2025 00:00:00").getTime();
+  const now = new Date().getTime();
+
+  const birthdayContent = document.getElementById("birthday-content");
+  const lockScreen = document.getElementById("lock-screen");
+  const countdown = document.getElementById("countdown");
+
+  if (now >= birthdayDate && now < dayAfter) {
+    birthdayContent.style.display = "block";
+  } else {
+    lockScreen.style.display = "block";
+
+    function updateCountdown() {
+      const nowTime = new Date().getTime();
+      let distance = birthdayDate - nowTime;
+
+      if (distance < 0) {
+        location.reload(); // reload to show content when the time arrives
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  }
+</script> 
+
+</body>
+</html>
